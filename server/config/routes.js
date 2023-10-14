@@ -1,14 +1,12 @@
 import express from 'express'
 
-// import SalonController from '../controllers/salon.js'
 import AppointmentsController from '../controllers/appointments.js'
 import HairStylesController from '../controllers/hairstyles.js'
 import HairStylistsController from '../controllers/hairstylists.js'
 import UsersController from '../controllers/users.js'
+import PeopleController from '../controllers/people.js'
 
 const router = express.Router()
-
-// salon - add route to get salon info
 
 // appointments
 router.get('/appointments', AppointmentsController.getAppointments)
@@ -25,6 +23,9 @@ router.get('/hairstylists/:id', HairStylistsController.getHairStylistById)
 // users
 router.get('/users', UsersController.getUsers)
 router.get('/users/:id', UsersController.getUserById)
+
+// people - add route to get people info
+router.get('/people', PeopleController.getPeople)
 
 // users - add route to get user appointments
 
