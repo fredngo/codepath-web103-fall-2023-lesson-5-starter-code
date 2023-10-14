@@ -23,11 +23,9 @@ router.get('/hairstylists/:id', HairStylistsController.getHairStylistById)
 // users
 router.get('/users', UsersController.getUsers)
 router.get('/users/:id', UsersController.getUserById)
+router.get('/users/:id/appointments', UsersController.getUserAppointments)
 
 // people - add route to get people info
 router.get('/people', PeopleController.getPeople)
-
-// users - add route to get user appointments
-
 
 export default router
